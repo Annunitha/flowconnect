@@ -187,7 +187,7 @@
 
 .auth-form__input-icon {
     position: absolute;
-    left: 14px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--gray-400);
@@ -195,7 +195,7 @@
 
 .auth-form__input {
     width: 100%;
-    padding: 12px 16px 12px 44px;
+    padding-left: 40px;
     border: 1px solid var(--border-default);
     border-radius: 12px;
     font-size: 15px;
@@ -221,6 +221,35 @@
 .auth-form__submit {
     width: 100%;
     margin-top: 12px;
+}
+
+.auth-form__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.auth-form__checkbox input:checked {
+    background: var(--primary-600);
+    border-color: var(--primary-600);
+}
+
+.auth-form__checkbox-label {
+    font-size: 13px;
+    color: var(--text-secondary);
+    padding: 0 20px;
+}
+
+.auth-form__checkbox-wrapper {
+    position: relative;
+}
+
+.auth-form__checkbox-input {
+    position: absolute;
+    opacity: 100%;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
 }
 
 /* Footer of Card */

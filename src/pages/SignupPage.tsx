@@ -106,6 +106,7 @@ export default function SignupPage() {
                                 <div className="auth-form__input-wrapper">
                                     <User size={16} className="auth-form__input-icon" />
                                     <input
+                                        style={{ textIndent: '20px' }}
                                         type="text"
                                         id="signup-name"
                                         className="auth-form__input"
@@ -122,6 +123,7 @@ export default function SignupPage() {
                                 <div className="auth-form__input-wrapper">
                                     <Mail size={16} className="auth-form__input-icon" />
                                     <input
+                                        style={{ textIndent: '20px' }}
                                         type="email"
                                         id="signup-email"
                                         className="auth-form__input"
@@ -138,6 +140,7 @@ export default function SignupPage() {
                                 <div className="auth-form__input-wrapper">
                                     <Lock size={16} className="auth-form__input-icon" />
                                     <input
+                                        style={{ textIndent: '20px' }}
                                         type={showPassword ? 'text' : 'password'}
                                         id="signup-password"
                                         className="auth-form__input"
@@ -183,7 +186,6 @@ export default function SignupPage() {
                                     className={`auth-form__checkbox ${agreedToTerms ? 'auth-form__checkbox--checked' : ''}`}
                                     onClick={() => setAgreedToTerms(!agreedToTerms)}
                                 >
-                                    {agreedToTerms && <Check size={12} />}
                                 </div>
                                 <input
                                     type="checkbox"
@@ -193,8 +195,12 @@ export default function SignupPage() {
                                     onChange={(e) => setAgreedToTerms(e.target.checked)}
                                 />
                                 <span className="auth-form__checkbox-label">
-                                    I agree to the <Link to="/terms" className="auth-form__link">Terms of Service</Link> and{' '}
-                                    <Link to="/privacy" className="auth-form__link">Privacy Policy</Link>
+                                    I agree to the <Link to="/terms" className="auth-form__link" style={{ color: 'var(--primary-600)' }}>
+                                        Terms of Service
+                                    </Link> and{' '}
+                                    <Link to="/privacy" className="auth-form__link" style={{ color: 'var(--primary-600)' }}>
+                                        Privacy Policy
+                                    </Link>
                                 </span>
                             </label>
 
